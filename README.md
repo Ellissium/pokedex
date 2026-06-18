@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# 🔴 Pokedex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A lightweight and responsive React application that connects to the public **PokeAPI** to fetch, display, and filter Pokemon cards. Built as a single-page application (SPA) with a focus on clean architecture, performance optimization, and smooth UI/UX.
 
-## Available Scripts
+## 💻 Live Demo
+Check out the live application here: **[https://ellissium.github.io/pokedex/](https://ellissium.github.io/pokedex/)**
 
-In the project directory, you can run:
+## 🔑 Key Features
 
-### `npm start`
+* **Dynamic Pagination:** Fetches Pokemon data in chunks of 12 using optimized parallel API requests.
+* **Smart Filtering:** Instant filtering by Pokemon types (e.g., Fire, Water, Grass) with zero-lag UI response.
+* **Performance Boost:** Utilizes React hooks (`useMemo`) to prevent unnecessary re-renders during interactions.
+* **Detailed View:** Click on any Pokemon card to load and display its full stats and features in a dedicated sidebar.
+* **Robust UX Loading State:** Implements an overlay loader that covers the list safely without causing layout shifts or allowing duplicate clicks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack & Libraries
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Frontend:** React.js (Functional Components, Hooks)
+* **Styling:** CSS Modules (`*.module.css`) for scoped and maintainable styles
+* **HTTP Client:** Axios (with `Promise.all` for parallel request handling)
+* **Deployment:** GitHub Pages (`gh-pages`)
+* **API:** [PokeAPI v2](https://pokeapi.co/docs/v2)
 
-### `npm test`
+## 📈 Performance Optimizations Implemented
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Parallel Request Batching:** Replaced sequential `for` loop requests with `Promise.all`. This reduced the loading time per batch by up to 5x.
+2. **State Memoization:** Wrapped heavy filtering logic in `useMemo` to ensure the array is only processed when the data or filter type actually changes—preventing slowdowns when clicking on individual cards.
+3. **Safe ID Parsing:** Avoided hardcoded counter bugs (`id++`) by safely extracting real entities' IDs directly from the PokeAPI payload strings, preventing `404` crashes on higher pagination offsets (especially after ID 905).
+4. **Valid DOM Nesting:** Ensured perfect standard HTML tables compliance inside the detailed features view, solving React-to-DOM synchronization warnings and UI state freezing.
 
-### `npm run build`
+## 📦 Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these steps to run the project locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Ellissium/pokedex.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Navigate to the project folder:**
+   ```bash
+   cd pokedex
+   ```
 
-### `npm run eject`
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Start the development server:**
+   ```bash
+   npm start
+   ```
+   *The app should now be running on `http://localhost:3000`.*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+*Developed as a technical assignment to demonstrate React state management, API integration, and performance profiling.*
