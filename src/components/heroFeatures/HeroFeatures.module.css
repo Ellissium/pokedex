@@ -1,79 +1,88 @@
 .hero__features {
-    display: flex;
-    justify-content: center;
-    width: 150px;
-    height: fit-content;
-    margin: 10px;
-    border: 4px solid black;
-    border-radius: 10px;
-    background: lightgray;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  height: fit-content;
+  margin: 10px;
+  border: 4px solid black;
+  border-radius: 10px;
+  background: lightgray;
+}
+
+.hero__animation {
+  cursor: pointer;
 }
 
 .hero__animation:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
-.hero__animation:active{
-    transform: translateY(5px);
+.hero__animation:active {
+  transform: translateY(5px);
 }
 
 .features__content {
-    width: 100%;
+  width: 100%;
+}
+
+.hero__imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero__image {
-    display: flex;
-    justify-content: center;
+  width: 100px;
+  height: 100px;
 }
 
 .hero__name {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.features__list{
-    display: flex;
-    justify-content: center;
-    margin: 10px 0px;
-    padding: 10px 0px;
-    background: white;
-    width: 100%;
+.features__list {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
+  padding: 10px 0px;
+  background: white;
+  width: 100%;
 }
 
 .features__table {
-    width: 90%;
-    border: 1px solid black;
-    border-spacing: 0px;
-    border-collapse: collapse;
+  width: 90%;
+  border: 1px solid black;
+  border-spacing: 0px;
+  border-collapse: collapse;
 }
 
 .hero__content {
-    min-width: 100%;
+  min-width: 100%;
 }
 
 .hero__types {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 0px;
-    margin: 10px 0px;
-    background: white;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  margin: 10px 0px;
+  background: white;
+  width: 100%;
 }
 
 .hero__type {
-   border-radius: 10px;
-   width: fit-content;
-   padding: 0px 5px;
-   margin: 5px;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 0px 5px;
+  margin: 5px;
 }
 
 .hero__list__type {
-   border: 1px solid black;
+  border: 1px solid black;
 }
 
 td {
-    text-align: center;
-    border: 1px solid black;
-    padding: 0px
+  text-align: center;
+  border: 1px solid black;
+  padding: 0px;
 }

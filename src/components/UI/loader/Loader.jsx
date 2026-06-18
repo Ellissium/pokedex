@@ -1,15 +1,12 @@
-import React from 'react'
-import classes from './Loader.module.css'
+import React from "react";
+import classes from "./Loader.module.css";
 
 const Loader = () => {
-    return (
-        <div className={classes.loader__box}>
-            <div className={classes.loader}>
+  return (
+    <div className={classes.loader__box}>
+      <div className={classes.loader}></div>
+    </div>
+  );
+};
 
-            </div>
-        </div>
-
-    )
-}
-
-export default Loader
+export default Loader;

@@ -1,0 +1,23 @@
+const options = [
+  { value: "normal" },
+  { value: "fighting" },
+  { value: "flying" },
+  { value: "poison" },
+  { value: "ground" },
+  { value: "rock" },
+  { value: "bug" },
+  { value: "ghost" },
+  { value: "steel" },
+  { value: "fire" },
+  { value: "water" },
+  { value: "grass" },
+  { value: "electric" },
+  { value: "psychic" },
+  { value: "ice" },
+  { value: "dragon" },
+  { value: "dark" },
+  { value: "fairy" },
+  { value: "shadow" },
+];
+
+export default options;

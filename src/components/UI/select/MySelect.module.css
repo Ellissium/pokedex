@@ -1,38 +1,38 @@
 .mySelect {
-    display: flex;
-    justify-content: center;
-    background: red;
-    height: 30px;
-    width: 200px;
-    min-width: 100px;
-    margin: 10px 0px 5px;
-    padding: 2px 0px;
-    border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  background: red;
+  height: 30px;
+  width: 200px;
+  min-width: 100px;
+  margin: 10px 0px 5px;
+  padding: 2px 0px;
+  border-radius: 10px;
 }
 
 .mySelect__body {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    border: none;
-    background: none;
-    outline: none;
-    text-align: center;
-    font-weight: normal;
-    font-size: 16px;
-    color: white;
-    width: 90%;
-    cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  width: 90%;
+  cursor: pointer;
 }
 
 .mySelect__body:hover {
-    color: #15223D;
+  color: #15223d;
 }
 
 .mySelect__body:active {
-    color: white
+  color: white;
 }
 
 .mySelect__thumb {
-    background: #15223D;
-    color: white;
+  background: #15223d;
+  color: white;
 }
